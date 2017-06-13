@@ -1,4 +1,4 @@
-W/**
+/**
 * @file main.cpp
 * @author Felipe Medeiros
 * @version 1.0
