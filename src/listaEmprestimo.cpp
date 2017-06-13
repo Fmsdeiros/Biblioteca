@@ -20,7 +20,7 @@ ListaEmp::ListaEmp(){
 	cauda = NULL;
 }
 /**
-* @return booleano que informa se a lista est· ou nao vazia
+* @return booleano que informa se a lista est√° ou nao vazia
 */
 bool ListaEmp::listaVazia(){
 
@@ -35,7 +35,7 @@ void ListaEmp::exibir(){
 	Emprestimo* primario = cabeca;
 
 	if(listaVazia())
-		cout << "N„o existem emprestimos cadastrados." << endl;
+		cout << "N√£o existem emprestimos cadastrados." << endl;
 	else{
 		while(primario){
 	 		cout << *primario << endl;
@@ -44,7 +44,7 @@ void ListaEmp::exibir(){
 	}
 }
 /**
-* @param bk Objeto da classe emprestimo que ser· inserido na lista de emprestimos
+* @param bk Objeto da classe emprestimo que ser√° inserido na lista de emprestimos
 */
 void ListaEmp::inserirInicio(Emprestimo bk){
     //auxiliar que recebe o emprestimo
@@ -61,7 +61,7 @@ void ListaEmp::inserirInicio(Emprestimo bk){
 	}
 }
 /**
-* @param bk Objeto da classe emprestimo que ser· inserido na lista de emprestimos
+* @param bk Objeto da classe emprestimo que ser√° inserido na lista de emprestimos
 */
 void ListaEmp::inserirFinal(Emprestimo bk){
     //auxiliar que recebe o emprestimo
@@ -96,14 +96,14 @@ int ListaEmp::tamanho(){
 	return tam;
 }
 /**
-* @param titulo String que contem o nome de um livro que est· emprestado
+* @param titulo String que contem o nome de um livro que est√° emprestado
 *
 * @return retorna o emprestimo que contem o livro
 */
 Emprestimo* ListaEmp::buscaEmprestimo(string titulo){
     //aponta para o inicio da lista
 	Emprestimo* primario = cabeca;
-    //no caso de nao encontrar o emprestimo, È retornado um emprestimo vazio    
+    //no caso de nao encontrar o emprestimo, √© retornado um emprestimo vazio    
 	Emprestimo* vazio = new Emprestimo();
 	while(primario){
 		if(primario->getNomeLivro() == titulo)
@@ -116,9 +116,9 @@ Emprestimo* ListaEmp::buscaEmprestimo(string titulo){
 * @param atual objeto da classe Data que contem o a data do dia atual
 */
 void ListaEmp::buscaAtraso(Data atual){
-    //informa se h· algum emprestimo atrasado
+    //informa se h√° algum emprestimo atrasado
     bool atrasou = false;
-    //informa se um emprestimo est· atrasdo
+    //informa se um emprestimo est√° atrasdo
     bool atrasado;
     //recebe a data de devolucao do emprestimo
     Data validade;
@@ -190,7 +190,7 @@ void ListaEmp::attListaTxt(){
 	escreve.close();
 }
 /**
-* @param titulo String que contÈm o titulo de um livro que ser· retirado da lista de Emprestimos
+* @param titulo String que cont√©m o titulo de um livro que ser√° retirado da lista de Emprestimos
 *
 * @return objeto da classe livro que foi retirado da lista
 */
@@ -200,11 +200,11 @@ livro ListaEmp::devolucao(string titulo){
 
         //recebe o objeto da classe emprestimo que deve ser deletado
 		Emprestimo* deleta = buscaEmprestimo(titulo);
-        //Objeto usado para saber se deleta est· ou nao vazio
+        //Objeto usado para saber se deleta est√° ou nao vazio
 		Emprestimo* vazio = new Emprestimo();
         //Aponta para o inicio da lista
 		Emprestimo* primario = cabeca;
-        //objeto que est· seguindo primario porÈm 1 posiÁao atr·s dele na lista
+        //objeto que est√° seguindo primario por√©m 1 posi√ßao atr√°s dele na lista
         Emprestimo* secundario = NULL;
 
 		if(deleta != vazio){
@@ -233,7 +233,7 @@ ListaEmp carregaLista_Emprestimo(){
 
     ifstream recebe;
 
-    //lista que ser· carregada com os emprestimos
+    //lista que ser√° carregada com os emprestimos
     ListaEmp nova;
     //varavel auxiliar para incluir elementos na lista
     Emprestimo emp;
@@ -242,7 +242,7 @@ ListaEmp carregaLista_Emprestimo(){
     //variavel auxiliar para incluir um objeto da classe user em emp
     usuario user;
     //conta quantos emprestimos foram inseridos na lista
-    int cont = 0;
+    int cont = 0,
     //recebe a quantidade de emprestimso salvos no txt
         quant;
     //string auxiliar
